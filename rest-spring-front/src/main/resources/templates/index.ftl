@@ -6,5 +6,14 @@
 </head>
 <body>
 Spring rocks the web
+<div>
+<#if restaurantes??>
+    <ul>
+        <#list restaurantes as item>
+            <li>${item.nom!""}</li>
+        </#list>
+    </ul>
+</#if>
+</div>
 </body>
 </html>
