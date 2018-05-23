@@ -17,7 +17,7 @@ public class ReadDB extends Restaurantes {
         ArrayList array1 = new ArrayList();
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@35.205.41.45:1521:XE", "usuari", "usuari");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@35.180.32.114:1521:xe", "usuari", "usuari");
             // se crea este statement para incluir dos querys
             PreparedStatement stmt;
             if ((cerca != null) && !cerca.equals("")) {
