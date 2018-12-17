@@ -1,6 +1,6 @@
 package com.learningjava.rest.spring.front.controller;
 
-import com.learningjava.rest.spring.core.Greeting;
+import com.learningjava.rest.spring.front.data.Greeting;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

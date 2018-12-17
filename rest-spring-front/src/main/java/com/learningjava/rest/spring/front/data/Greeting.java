@@ -1,4 +1,4 @@
-package com.learningjava.rest.spring.core;
+package com.learningjava.rest.spring.front.data;
 /**
  * com.learningjava.rest.spring.core
  * Class

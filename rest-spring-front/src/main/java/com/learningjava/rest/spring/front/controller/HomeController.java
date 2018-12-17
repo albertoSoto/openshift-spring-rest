@@ -1,13 +1,13 @@
 package com.learningjava.rest.spring.front.controller;
 
-import com.learningjava.rest.spring.core.ReadDB;
-import com.learningjava.rest.spring.core.Restaurantes;
-import org.apache.tomcat.util.buf.StringUtils;
+import com.learningjava.rest.spring.front.data.Restaurant;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * com.learningjava.rest.spring.front
@@ -19,8 +19,12 @@ public class HomeController {
     @RequestMapping("/")
     public String index(Model model) {
         System.out.println("llego");
-        ReadDB rd = new ReadDB();
-        List<Restaurantes> data = rd.readRestaurantes("");
+     /*   ReadDB rd = new ReadDB();
+        List<Restaurantes> data = rd.readRestaurantes("");*/
+        List<Restaurant> data = new ArrayList<>();
+        Restaurant aux = new Restaurant();
+        aux.setName(UUID.randomUUID().toString());
+        data.add(aux);
         model.addAttribute("restaurantes",data);
         return "index";
     }

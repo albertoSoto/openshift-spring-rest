@@ -10,7 +10,7 @@ Spring rocks the web
 <#if restaurantes??>
     <ul>
         <#list restaurantes as item>
-            <li>${item.nom!""}</li>
+            <li>${item.name!""}</li>
         </#list>
     </ul>
 </#if>
