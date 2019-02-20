@@ -22,9 +22,11 @@ public class HomeController {
      /*   ReadDB rd = new ReadDB();
         List<Restaurantes> data = rd.readRestaurantes("");*/
         List<Restaurant> data = new ArrayList<>();
-        Restaurant aux = new Restaurant();
-        aux.setName(UUID.randomUUID().toString());
-        data.add(aux);
+        for (int i = 0; i < 10; i++) {
+            Restaurant aux = new Restaurant();
+            aux.setName("Pepito"+i);
+            data.add(aux);
+        }
         model.addAttribute("restaurantes",data);
         return "index";
     }
